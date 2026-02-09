@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Vantage Heating Pricing Page</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#CD7F32",
+                        "primary-dark": "#A05F20",
+                        "secondary": "#1F2937",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#111827",
+                        "surface-light": "#F3F4F6",
+                        "surface-dark": "#1F2937",
+                        "text-light": "#1F2937",
+                        "text-dark": "#F9FAFB",
+                        "accent-light": "#E5E7EB",
+                        "accent-dark": "#374151"
+                    },
+                    fontFamily: {
+                        display: ["Montserrat", "sans-serif"],
+                        body: ["Open Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-display transition-colors duration-200">
+    <!-- Navigation -->
+    <div class="bg-secondary text-white text-sm py-2 px-4 hidden md:block">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">call</span> 0800
+                    123 4567</span>
+                <span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">schedule</span>
+                    Open 24/7 for Emergencies</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-2"><span
+                        class="material-symbols-outlined text-sm text-primary">star</span> 5-Star Service Rating</span>
+                <a class="hover:text-primary transition" href="index.html">info@vantageheating.com</a>
+            </div>
+        </div>
+    </div>
+    <nav class="bg-background-light dark:bg-surface-dark shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <img alt="Vantage Heating Logo" class="h-10 w-auto object-contain hidden"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuADT4sKNSmhcSASbG7L1idjcLQtwvUErHTwFgoepF_ulUgpEmzrcKj8f9lrxwYEe2IHABZuBPgrSxuuIbTDkEI_B5IIWV4iE0XG3qmOO1m-xJTGyPRa_WrVmE4sMyOcatv5iOPKaFwzto1Snu_uK2DbfJJBxTX6VkDOIBmV5JL-TE_e041dn9c-7DcyEGwdljxWqUtWkYymUI-ok-kCrU1Jbup36hKivzEsMUbm5lbeWb3OJi2kXScWfR2JNeibCoAI85vLr0cFzmE" />
+                    <div class="flex flex-col">
+                        <span
+                            class="font-display font-bold text-2xl tracking-tight text-secondary dark:text-white">VANTAGE
+                            <span class="text-primary">HEATING</span></span>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center space-x-8 font-medium">
+                    <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="index.html">Home</a>
+                    <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="about.html">About Us</a>
+                    <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="services.html">Services</a>
+                    <a class="text-primary dark:text-primary" href="pricing.html">Pricing</a>
+                    <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="gallery.html">Gallery</a>
+                    <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="contact.html">Contact</a>
+                </div>
+                <div class="hidden lg:block">
+                    <a class="bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg hover:shadow-xl flex items-center gap-2"
+                        href="contact.html">
+                        <span class="material-symbols-outlined text-sm">calendar_month</span>
+                        Book Appointment
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-text-light dark:text-white p-2">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white dark:bg-surface-dark border-t border-gray-200 dark:border-gray-700 absolute top-full left-0 w-full shadow-lg z-40">
+            <ul class="flex flex-col p-4 space-y-4 font-medium text-center">
+                <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="index.html">Home</a></li>
+                <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="about.html">About Us</a></li>
+                <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="services.html">Services</a></li>
+                <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="pricing.html">Pricing</a></li>
+                <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="gallery.html">Gallery</a></li>
+                <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="contact.html">Contact</a></li>
+                <li class="flex justify-center">
+                    <a class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg hover:shadow-xl"
+                        href="contact.html">
+                        <span class="material-symbols-outlined text-sm">calendar_month</span>
+                        Book Appointment
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <script>
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        </script>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-12 overflow-hidden">
+        <div
+            class="absolute inset-0 z-0 opacity-10 dark:opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span
+                class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wide uppercase mb-4 border border-primary/20">
+                Simple &amp; Transparent
+            </span>
+            <h1
+                class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-white mb-6 leading-tight">
+                Pricing designed for your <br class="hidden md:block" />
+                <span class="text-primary">comfort and peace of mind.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10">
+                No hidden fees, no surprises. Choose the plan that fits your needs, from quick repairs to complete
+                system overhauls.
+            </p>
+            <!-- Toggle Switch -->
+            <div class="flex justify-center items-center mb-12">
+                <div class="bg-gray-200 dark:bg-gray-800 p-1.5 rounded-full inline-flex items-center relative">
+                    <button
+                        class="relative z-10 px-6 py-2 rounded-full text-sm font-bold bg-white dark:bg-neutral-dark text-primary shadow-md transition-all duration-300">
+                        Residential
+                    </button>
+                    <button
+                        class="relative z-10 px-6 py-2 rounded-full text-sm font-bold text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-all duration-300">
+                        Commercial
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Cards Section -->
+    <section class="pb-24 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+            <!-- Card 1: Standard Repair -->
+            <div
+                class="bg-white dark:bg-[#1e1611] rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 p-8 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
+                <div class="mb-4">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 text-primary">
+                        <span class="material-icons text-2xl">build</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Standard Repair</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mt-2 text-sm">Perfect for one-off fixes and emergency
+                        breakdowns.</p>
+                </div>
+                <div class="mb-6">
+                    <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">From</span>
+                    <div class="flex items-baseline">
+                        <span class="text-4xl font-extrabold text-gray-900 dark:text-white">£99</span>
+                        <span class="text-gray-500 dark:text-gray-400 ml-2">/ visit</span>
+                    </div>
+                </div>
+                <ul class="space-y-4 mb-8 flex-grow">
+                    <li class="flex items-start">
+                        <span class="material-icons text-primary text-xl mr-3">check_circle</span>
+                        <span class="text-gray-700 dark:text-gray-300 text-sm">Initial diagnostic assessment</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="material-icons text-primary text-xl mr-3">check_circle</span>
+                        <span class="text-gray-700 dark:text-gray-300 text-sm">First hour of labor included</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="material-icons text-primary text-xl mr-3">check_circle</span>
+                        <span class="text-gray-700 dark:text-gray-300 text-sm">No call-out fee within city limits</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="material-icons text-primary text-xl mr-3">check_circle</span>
+                        <span class="text-gray-700 dark:text-gray-300 text-sm">30-day guarantee on repairs</span>
+                    </li>
+                </ul>
+                <a class="block w-full text-center bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-bold py-3.5 rounded-xl transition-colors"
+                    href="index.html">
+                    Book Repair
+                </a>
+            </div>
+            <!-- Card 2: Annual Service Plan (Highlighted) -->
+            <div
+                class="bg-white dark:bg-[#1e1611] rounded-2xl shadow-2xl border-2 border-primary relative p-8 transform md:-translate-y-4 z-10 flex flex-col h-full">
+                <div
+                    class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide shadow-lg">
+                    Most Popular
+                </div>
+                <div class="mb-4 mt-2">
+                    <div
+                        class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-primary/30">
+                        <span class="material-icons text-2xl">verified_user</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Annual Service Plan</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mt-2 text-sm">Ongoing peace of mind and system longevity.
+                    </p>
+                </div>
+                <div class="mb-6">
+                    <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">Just</span>
+                    <div class="flex items-baseline">
+                        <span class="text-5xl font-extrabold text-primary">£15</span>
+                        <span class="text-gray-500 dark:text-gray-400 ml-2">/ month</span>
+                    </div>
+                </div>
+                <ul class="space-y-4 mb-8 flex-grow">
+                    <li class="flex items-start">
+                        <span class="material-icons text-primary text-xl mr-3">check_circle</span>
+                        <span class="text-gray-700 dark:text-gray-300 text-sm font-semibold">Annual comprehensive boiler
+                            service</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="material-icons text-primary text-xl mr-3">check_circle</span>
+                        <span class="text-gray-700 dark:text-gray-300 text-sm font-semibold">Priority emergency
+                            response</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="material-icons text-primary text-xl mr-3">check_circle</span>
+                        <span class="text-gray-700 dark:text-gray-300 text-sm">20% discount on parts &amp; labor</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="material-icons text-primary text-xl mr-3">check_circle</span>
+                        <span class="text-gray-700 dark:text-gray-300 text-sm">Unlimited phone support</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="material-icons text-primary text-xl mr-3">check_circle</span>
+                        <span class="text-gray-700 dark:text-gray-300 text-sm">Free radiator bleed &amp; balance</span>
+                    </li>
+                </ul>
+                <a class="block w-full text-center bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-primary/30 transform hover:-translate-y-0.5"
+                    href="index.html">
+                    Start Protection Plan
+                </a>
+            </div>
+            <!-- Card 3: Full Installation -->
+            <div
+                class="bg-white dark:bg-[#1e1611] rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 p-8 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
+                <div class="mb-4">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 text-primary">
+                        <span class="material-icons text-2xl">hvac</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Full Installation</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mt-2 text-sm">Upgrade your home with a modern efficient
+                        system.</p>
+                </div>
+                <div class="mb-6">
+                    <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">Starting From</span>
+                    <div class="flex items-baseline">
+                        <span class="text-4xl font-extrabold text-gray-900 dark:text-white">£2,500</span>
+                    </div>
+                </div>
+                <ul class="space-y-4 mb-8 flex-grow">
+                    <li class="flex items-start">
+                        <span class="material-icons text-primary text-xl mr-3">check_circle</span>
+                        <span class="text-gray-700 dark:text-gray-300 text-sm">Free in-home consultation</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="material-icons text-primary text-xl mr-3">check_circle</span>
+                        <span class="text-gray-700 dark:text-gray-300 text-sm">Removal of old system</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="material-icons text-primary text-xl mr-3">check_circle</span>
+                        <span class="text-gray-700 dark:text-gray-300 text-sm">Top-tier energy efficient boiler</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="material-icons text-primary text-xl mr-3">check_circle</span>
+                        <span class="text-gray-700 dark:text-gray-300 text-sm">Smart thermostat installation</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="material-icons text-primary text-xl mr-3">check_circle</span>
+                        <span class="text-gray-700 dark:text-gray-300 text-sm">Up to 10-year manufacturer
+                            warranty</span>
+                    </li>
+                </ul>
+                <a class="block w-full text-center bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-bold py-3.5 rounded-xl transition-colors"
+                    href="index.html">
+                    Request Quote
+                </a>
+            </div>
+        </div>
+        <!-- Trust Badges -->
+        <div
+            class="mt-16 flex flex-wrap justify-center items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+            <div class="flex flex-col items-center">
+                <span class="material-icons text-4xl mb-2 text-gray-600 dark:text-gray-300">verified</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-gray-500">Gas Safe Registered</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="material-icons text-4xl mb-2 text-gray-600 dark:text-gray-300">star</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-gray-500">5-Star Rated</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="material-icons text-4xl mb-2 text-gray-600 dark:text-gray-300">security</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-gray-500">Fully Insured</span>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white dark:bg-[#1e1611]">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-500 dark:text-gray-400">Common questions about our pricing and services.</p>
+            </div>
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden group">
+                    <details class="group">
+                        <summary
+                            class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                            <span>Do you charge a call-out fee?</span>
+                            <span class="transition group-open:rotate-180">
+                                <span class="material-icons text-primary">keyboard_arrow_down</span>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 dark:text-gray-400 px-6 pb-6 pt-0 leading-relaxed">
+                            For standard repairs within our primary service area, we do not charge a separate call-out
+                            fee. The first hour of labor is included in the base price of £99. For emergency calls
+                            outside of business hours, a surcharge may apply, which will be communicated upfront.
+                        </div>
+                    </details>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden group">
+                    <details class="group">
+                        <summary
+                            class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                            <span>Are parts included in the Annual Service Plan?</span>
+                            <span class="transition group-open:rotate-180">
+                                <span class="material-icons text-primary">keyboard_arrow_down</span>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 dark:text-gray-400 px-6 pb-6 pt-0 leading-relaxed">
+                            The Annual Service Plan covers labor for the annual service check and minor adjustments.
+                            Replacement parts are not included free of charge, but plan members receive a significant
+                            20% discount on all parts required for any repairs.
+                        </div>
+                    </details>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden group">
+                    <details class="group">
+                        <summary
+                            class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                            <span>How do I get a quote for a full installation?</span>
+                            <span class="transition group-open:rotate-180">
+                                <span class="material-icons text-primary">keyboard_arrow_down</span>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 dark:text-gray-400 px-6 pb-6 pt-0 leading-relaxed">
+                            Because every home is unique, we provide custom quotes for full installations. You can book
+                            a free consultation online. One of our engineers will visit your property, assess your
+                            heating needs, and provide a detailed, fixed-price quote with no obligation.
+                        </div>
+                    </details>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden group">
+                    <details class="group">
+                        <summary
+                            class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                            <span>What payment methods do you accept?</span>
+                            <span class="transition group-open:rotate-180">
+                                <span class="material-icons text-primary">keyboard_arrow_down</span>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 dark:text-gray-400 px-6 pb-6 pt-0 leading-relaxed">
+                            We accept all major credit and debit cards, bank transfers, and cash. For larger
+                            installations, we also offer flexible financing options to spread the cost over 12, 24, or
+                            36 months.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Map & Contact Section -->
+    <section class="relative h-96 w-full">
+        <div class="absolute inset-0 w-full h-full bg-slate-900">
+            <img class="w-full h-full object-cover opacity-40 mix-blend-overlay"
+                data-alt="Dark map background showing city streets with orange location markers"
+                data-location="London, UK"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH_ls9eZnU3KhLvb7chjDIIK_Bi-Tqr-0yayseLCqlZ8bofozGFZI3KDq0CL9PfR4_IY26w0IAPDYIAP6v732FFw71eVFko20AAFve7y30n8M5DfpS49sboWHeYIq9uAoeXhBkAtOEMiLLUqDGH4dmNtCLpysCVbMYGdSbVUdzuTaNfvma5pT8tegFFfaOKVO1wzmZKNL_bPSVwFyErL2XZFECLZl88spODMEPk_tFSC3OOoRF0Tq7PiLOWBdk9W0aEP8-JA4Bii4" />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 to-transparent"></div>
+        <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+            <h2 class="text-3xl font-bold text-white mb-6">Still have questions?</h2>
+            <p class="text-gray-300 max-w-xl mb-8">
+                Our team is ready to help you find the perfect heating solution for your home or business. We cover the
+                greater metro area.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-xl font-bold transition-all shadow-lg shadow-primary/30 flex items-center justify-center"
+                    href="index.html">
+                    <span class="material-icons mr-2">phone</span>
+                    0800 123 4567
+                </a>
+                <a class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white px-8 py-3 rounded-xl font-bold transition-all flex items-center justify-center"
+                    href="index.html">
+                    <span class="material-icons mr-2">email</span>
+                    Contact Support
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-secondary text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center mb-16">
+                <div class="text-center">
+                    <span
+                        class="font-display font-black text-5xl lg:text-7xl tracking-tighter text-white opacity-20 select-none">VANTAGE</span>
+                    <div
+                        class="font-display font-bold text-xl lg:text-2xl tracking-[0.5em] text-primary -mt-2 lg:-mt-4 uppercase">
+                        Heating</div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 border-b border-gray-700 pb-12">
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-white">About Us</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Vantage Heating is your local expert for all plumbing and heating needs. Dedicated to quality,
+                        transparency, and reliability.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="text-gray-400 hover:text-white transition" href="#"><i
+                                class="material-symbols-outlined">facebook</i></a>
+                        <a class="text-gray-400 hover:text-white transition" href="#"><i
+                                class="material-symbols-outlined">linked_camera</i></a>
+                        <a class="text-gray-400 hover:text-white transition" href="#"><i
+                                class="material-symbols-outlined">alternate_email</i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-white">Company Info</h4>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li><a class="hover:text-primary transition" href="about.html">About Us</a></li>
+                        <li><a class="hover:text-primary transition" href="services.html">Our Services</a></li>
+                        <li><a class="hover:text-primary transition" href="pricing.html">Pricing</a></li>
+                        <li><a class="hover:text-primary transition" href="gallery.html">Gallery</a></li>
+                        <li><a class="hover:text-primary transition" href="contact.html">Contact Us</a></li>
+                        <li><a class="hover:text-primary transition" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-white">Services</h4>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li><a class="hover:text-primary transition" href="services.html">Boiler Installations</a></li>
+                        <li><a class="hover:text-primary transition" href="services.html">Boiler Repairs</a></li>
+                        <li><a class="hover:text-primary transition" href="services.html">Power Flushing</a></li>
+                        <li><a class="hover:text-primary transition" href="services.html">Smart Heating</a></li>
+                        <li><a class="hover:text-primary transition" href="services.html">Leak Detection</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-white">Opening Hours</h4>
+                    <p class="text-gray-400 text-sm mb-2"><span class="text-white font-semibold">Saturday -
+                            Monday:</span><br />Open 24 Hours (Emergency)</p>
+                    <p class="text-gray-400 text-sm"><span class="text-white font-semibold">Tuesday -
+                            Friday:</span><br />8:00 AM - 8:00 PM</p>
+                </div>
+            </div>
+            <div class="text-center text-gray-500 text-xs">
+                © 2023 Vantage Heating. All rights reserved. Designed for excellence.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

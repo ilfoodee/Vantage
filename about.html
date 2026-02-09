@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Vantage Heating - About Us</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#CD7F32",
+                        "primary-dark": "#A05F20",
+                        "secondary": "#1F2937",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#111827",
+                        "surface-light": "#F3F4F6",
+                        "surface-dark": "#1F2937",
+                        "text-light": "#1F2937",
+                        "text-dark": "#F9FAFB",
+                        "accent-light": "#E5E7EB",
+                        "accent-dark": "#374151"
+                    },
+                    fontFamily: {
+                        display: ["Montserrat", "sans-serif"],
+                        body: ["Open Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-[#1b140d] dark:text-gray-100 font-display min-h-screen flex flex-col overflow-x-hidden">
+    <!-- Top Navigation -->
+    <div class="bg-secondary text-white text-sm py-2 px-4 hidden md:block">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">call</span> 0800
+                    123 4567</span>
+                <span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">schedule</span>
+                    Open 24/7 for Emergencies</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-2"><span
+                        class="material-symbols-outlined text-sm text-primary">star</span> 5-Star Service Rating</span>
+                <a class="hover:text-primary transition" href="index.html">info@vantageheating.com</a>
+            </div>
+        </div>
+    </div>
+    <nav class="bg-background-light dark:bg-surface-dark shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <img alt="Vantage Heating Logo" class="h-10 w-auto object-contain hidden"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuADT4sKNSmhcSASbG7L1idjcLQtwvUErHTwFgoepF_ulUgpEmzrcKj8f9lrxwYEe2IHABZuBPgrSxuuIbTDkEI_B5IIWV4iE0XG3qmOO1m-xJTGyPRa_WrVmE4sMyOcatv5iOPKaFwzto1Snu_uK2DbfJJBxTX6VkDOIBmV5JL-TE_e041dn9c-7DcyEGwdljxWqUtWkYymUI-ok-kCrU1Jbup36hKivzEsMUbm5lbeWb3OJi2kXScWfR2JNeibCoAI85vLr0cFzmE" />
+                    <div class="flex flex-col">
+                        <span
+                            class="font-display font-bold text-2xl tracking-tight text-secondary dark:text-white">VANTAGE
+                            <span class="text-primary">HEATING</span></span>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center space-x-8 font-medium">
+                    <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="index.html">Home</a>
+                    <a class="text-primary dark:text-primary" href="about.html">About Us</a>
+                    <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="services.html">Services</a>
+                    <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="pricing.html">Pricing</a>
+                    <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="gallery.html">Gallery</a>
+                    <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="contact.html">Contact</a>
+                </div>
+                <div class="hidden lg:block">
+                    <a class="bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg hover:shadow-xl flex items-center gap-2"
+                        href="contact.html">
+                        <span class="material-symbols-outlined text-sm">calendar_month</span>
+                        Book Appointment
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-text-light dark:text-white p-2">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white dark:bg-surface-dark border-t border-gray-200 dark:border-gray-700 absolute top-full left-0 w-full shadow-lg z-40">
+            <ul class="flex flex-col p-4 space-y-4 font-medium text-center">
+                <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="index.html">Home</a></li>
+                <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="about.html">About Us</a></li>
+                <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="services.html">Services</a></li>
+                <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="pricing.html">Pricing</a></li>
+                <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="gallery.html">Gallery</a></li>
+                <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="contact.html">Contact</a></li>
+                <li class="flex justify-center">
+                    <a class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg hover:shadow-xl"
+                        href="contact.html">
+                        <span class="material-symbols-outlined text-sm">calendar_month</span>
+                        Book Appointment
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <script>
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        </script>
+    </nav>
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+                data-alt="Plumbing technician standing confidently next to a branded service van"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBCQJAsnevnhEbMn1PTxKDxj63vEBP2526nU7MFvYvglkzbURfr7hFli0jdTik2UokZQbkHyONuzdwiLbAlq_GS_uLz4oM9gcvMZNuojBqT6CbTzuA8DR_ttiNLuKbYbNICRW4rGPNwSCVmP9u_OiPJVnfh7stCeJzDYphp4ut5Wg9i2vOQg0qyJNlG0x5BN1fsj9WMtPuErN3pn3WEPas64r4zuFMOzheDTmHaFSAll0zxT-ovskn63Gx7iM1ZGpoPn2dgcy5VI_c');">
+            </div>
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary border border-primary/30 text-sm font-bold mb-4 backdrop-blur-sm">
+                    Est. 2008
+                </span>
+                <h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-tight mb-6">
+                    More Than Just Heating.<br />
+                    <span class="text-primary">We Are Vantage.</span>
+                </h1>
+                <p class="text-gray-200 text-lg md:text-xl font-normal max-w-2xl mx-auto leading-relaxed">
+                    Your local heating experts dedicated to keeping your home warm and safe.
+                    Professional service with a personal touch.
+                </p>
+            </div>
+        </section>
+        <!-- Our Story Section -->
+        <section class="py-16 md:py-24 px-6 md:px-20 bg-background-light dark:bg-background-dark">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
+                    <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
+                        <img alt="Technician working on a boiler installation" class="w-full h-full object-cover"
+                            data-alt="Close up of technician hands fixing a pipe with tools"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMpxddWmeqqvRbTjksHuGMfuCaGESnC86BJ5od6nKKY3lzVmJii0tvGZkeX9yaF5_i_YkGwsig0qdTy4Y8i5onVJEFWS9YxgjTYIf0lYwKvcVys_HqG8nBMf8hAHZtwOhavcoPe7m8jDxBEvUhLszXyV2TDFbpNM45TIur4id7JcoBJ-iLK7GBPskXSH20LLw5SS6XkYwNwtBxdCQu81L1IZ4AVMylsz07PpwzilQw0eSvXk7wBpuVRNNM89KxsbhLo2cSaWQonrM" />
+                    </div>
+                    <div
+                        class="absolute -bottom-6 -right-6 bg-white dark:bg-[#332a20] p-6 rounded-lg shadow-lg border-l-4 border-primary max-w-xs hidden md:block">
+                        <p class="text-primary text-4xl font-bold mb-1">15+</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 font-medium">Years of trusted service in our
+                            local community</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-primary font-bold uppercase tracking-wider text-sm">Our Story</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-[#1b140d] dark:text-white leading-tight">From a
+                            Single Van to a Trusted Name</h2>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                        Founded on the principles of hard work and honest pricing, Vantage Heating started as a small
+                        family operation. We believed that if you treat customers like neighbors, the business will take
+                        care of itself.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                        Today, we've grown into a leading provider of heating solutions, but our core values remain the
+                        same: reliable service you can trust, transparent communication, and technical excellence. Every
+                        member of our team carries this legacy forward in every job they undertake.
+                    </p>
+                    <div class="pt-4">
+                        <img alt="Founder Signature" class="h-12 opacity-60 dark:invert"
+                            data-alt="Handwritten signature of the founder"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGsvw3CquGaREXzD9V4ynRvb-KJu03N_EcCBEBmy6oaLrgEAp-7hGwOjNVWU4F5HxIpj24kpWYMmQnhiagFVFhUjmq4xXmmZwUqkioYShcNjnpWjdIkEAayTflmG8J-JkYwdAYqBFMAkaKJ4YnvFC6-sO5LaPrZS3ngMPETBcw7dEbl15abvQT1X_k1wrvPpLYDZpMrrr4SQTt7lAPaqToLaNOizFwtdDaaQRyZp3xDlItDYYWbhfjTpvcPuFJjlJ66Z6U6k12Ksc" />
+                        <p class="text-sm font-bold mt-2 text-[#1b140d] dark:text-white">James Vantage, Founder</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Our Mission Section -->
+        <section class="py-16 md:py-24 px-6 md:px-20 bg-white dark:bg-[#2a2016]">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-primary font-bold uppercase tracking-wider text-sm">Our Mission</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#1b140d] dark:text-white mt-2 mb-4">Excellence in
+                        Every Pipe</h2>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg">
+                        We don't just fix pipes; we ensure your home is safe and comfortable. Our mission is built on
+                        three pillars of excellence that guide everything we do.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-background-light dark:bg-background-dark p-8 rounded-xl border border-gray-100 dark:border-[#3a2d20] hover:shadow-lg transition-all hover:-translate-y-1 group">
+                        <div
+                            class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">verified_user</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1b140d] dark:text-white mb-3">Safety First</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            We adhere to the strictest safety standards in the industry. Your family's well-being is our
+                            top priority in every installation and repair.
+                        </p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-background-light dark:bg-background-dark p-8 rounded-xl border border-gray-100 dark:border-[#3a2d20] hover:shadow-lg transition-all hover:-translate-y-1 group">
+                        <div
+                            class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">payments</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1b140d] dark:text-white mb-3">Transparent Pricing</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            No hidden fees, just honest quotes before we start work. We believe in fair pricing for
+                            quality work, with no surprises on the invoice.
+                        </p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-background-light dark:bg-background-dark p-8 rounded-xl border border-gray-100 dark:border-[#3a2d20] hover:shadow-lg transition-all hover:-translate-y-1 group">
+                        <div
+                            class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">handyman</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1b140d] dark:text-white mb-3">Quality Workmanship</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            We take pride in our craft, ensuring every job is done right the first time. Our team is
+                            constantly training on the latest heating technologies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Team Section -->
+        <section class="py-16 md:py-24 px-6 md:px-20 bg-background-light dark:bg-background-dark">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                    <div class="max-w-2xl">
+                        <span class="text-primary font-bold uppercase tracking-wider text-sm">Our Team</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-[#1b140d] dark:text-white mt-2">Meet the Experts
+                        </h2>
+                        <p class="text-gray-600 dark:text-gray-300 mt-4 text-lg">
+                            The friendly faces behind the vans. Our certified engineers bring years of experience and a
+                            smile to every job.
+                        </p>
+                    </div>
+                    <button
+                        class="hidden md:flex items-center gap-2 text-primary font-bold hover:text-[#d66e0b] transition-colors">
+                        Join our team <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Member 1 -->
+                    <div
+                        class="group relative overflow-hidden rounded-xl bg-white dark:bg-[#2a2016] shadow-sm hover:shadow-md transition-all">
+                        <div class="aspect-[3/4] overflow-hidden bg-gray-200">
+                            <img alt="James Vantage Portrait"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Portrait of a smiling man in a suit or uniform"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBc0QIwXNgwXsflyTKeQWJwhyFxvY20_MMObb0S18TmKUx9aXolykcUdF_Sl6Q_LMbxE3F0dPJVXHmi3kZouemf_cFIFOw5jbtuprKmkozM-vj9Td_gM_6bH5KWpaGmdAe1dW4zX7SrVRXW1NOukxOS84SkH_lG4pQy0LF5cpthRxmcSQejwdovN0t6dCjuv9j4JgTwyZzaqJhQhxJhOeicu6tJ_Sl2oNE3T-JGX97ImmrtmOApbJ6YdoOtX_LLyAqdHHpMKhhMW8" />
+                        </div>
+                        <div class="p-4 relative">
+                            <h3 class="text-lg font-bold text-[#1b140d] dark:text-white">James Vantage</h3>
+                            <p class="text-primary text-sm font-medium">Founder &amp; Senior Engineer</p>
+                        </div>
+                    </div>
+                    <!-- Member 2 -->
+                    <div
+                        class="group relative overflow-hidden rounded-xl bg-white dark:bg-[#2a2016] shadow-sm hover:shadow-md transition-all">
+                        <div class="aspect-[3/4] overflow-hidden bg-gray-200">
+                            <img alt="Sarah Jenkins Portrait"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Portrait of a smiling woman in business casual attire"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmWaY_kIEL8zhuR7IXWeVGghOd-MJ7KtideUOe2arbnzgg4e2Hwz7LBNCJ2VjnIkQIDbhPwKlp3E84CSJouTNqwjrd3-1qt5s95OrENgWCCBX9yyTtslV39DRjc9e0TYC4yY-rNI6MVy0ksDcC7bDxMUKGi_2L0uoSVrNlZ5yNH4L3KcUT_RBSqUrAaZ7d3ngkcqBevCBRWlHPQbnq8FRAWaN2UiHwsXIzm0yMs8S-MH7AETDDFoY-FSl9f3gupJ4BGOtlyXhL_TY" />
+                        </div>
+                        <div class="p-4 relative">
+                            <h3 class="text-lg font-bold text-[#1b140d] dark:text-white">Sarah Jenkins</h3>
+                            <p class="text-primary text-sm font-medium">Operations Manager</p>
+                        </div>
+                    </div>
+                    <!-- Member 3 -->
+                    <div
+                        class="group relative overflow-hidden rounded-xl bg-white dark:bg-[#2a2016] shadow-sm hover:shadow-md transition-all">
+                        <div class="aspect-[3/4] overflow-hidden bg-gray-200">
+                            <img alt="David Chen Portrait"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Portrait of a smiling man in work uniform"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU3TJypVZngs8mCepyHTx1cSen1-qPbbDC6Eij_X4yU6z0joLQCOvSn79g7-bxFf6zXdB-myng_cUh0Ioj0mG_XGPKon7tLAIpF7460pXLaOGUvh7FYpt1LIx4nE2Z7fgbddhRmvL4reQOHcvBpkqFS_nKdW62do4fxrC3Y0Ybezil8n9nfR3Top9yMhoM3DVJjx7jt9G_rAEYBKFbAPLNlMdI7zczjmXz-WDTssKQj__e6h-Lsw_D5rFJoCTVEw6UDn1g0vvMCgc" />
+                        </div>
+                        <div class="p-4 relative">
+                            <h3 class="text-lg font-bold text-[#1b140d] dark:text-white">David Chen</h3>
+                            <p class="text-primary text-sm font-medium">Lead Gas Engineer</p>
+                        </div>
+                    </div>
+                    <!-- Member 4 -->
+                    <div
+                        class="group relative overflow-hidden rounded-xl bg-white dark:bg-[#2a2016] shadow-sm hover:shadow-md transition-all">
+                        <div class="aspect-[3/4] overflow-hidden bg-gray-200">
+                            <img alt="Michael Ross Portrait"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Portrait of a smiling man in blue shirt"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1IN5oYTdSh26ZSOXV69tygtQsVz2hCyVHVx2yCGIefdrS2hmP8Yr2ZJlb3E0DucekhHIznL3rU-bRGcoSN_6niLa-L2ikWUqnvWWi9_o8rsqv3RHZJ1ENiu0rCV_jBjl67aw4M-QgJY9iJkiHilKGLl80Pa-leVG89XGPA9vxuHU5OUNwvXl1B9kaA2t5v9I1V-heMAJ3yMxhNhsHpxpCo-1atqrT5COBUqvRLpwfe_W9FYLW__mof5xOgUthDmaSHCm02RfsBpQ" />
+                        </div>
+                        <div class="p-4 relative">
+                            <h3 class="text-lg font-bold text-[#1b140d] dark:text-white">Michael Ross</h3>
+                            <p class="text-primary text-sm font-medium">Apprentice</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 md:hidden flex justify-center">
+                    <button
+                        class="flex items-center gap-2 text-primary font-bold hover:text-[#d66e0b] transition-colors">
+                        Join our team <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Accreditations Section -->
+        <section class="py-12 px-6 border-t border-gray-200 dark:border-[#3a2d20] bg-white dark:bg-[#221910]">
+            <div class="max-w-7xl mx-auto text-center">
+                <p class="text-gray-500 dark:text-gray-400 text-sm font-bold uppercase tracking-widest mb-8">Fully
+                    Accredited &amp; Certified By</p>
+                <div
+                    class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                    <!-- Logo placeholders using text for structure, but would typically be SVGs -->
+                    <div class="flex items-center gap-2 font-bold text-xl text-gray-800 dark:text-gray-300">
+                        <span class="material-symbols-outlined text-yellow-500 text-4xl">local_fire_department</span>
+                        <span>Gas Safe</span>
+                    </div>
+                    <div class="flex items-center gap-2 font-bold text-xl text-gray-800 dark:text-gray-300">
+                        <span class="material-symbols-outlined text-blue-600 text-4xl">water_drop</span>
+                        <span>CIPHE</span>
+                    </div>
+                    <div class="flex items-center gap-2 font-bold text-xl text-gray-800 dark:text-gray-300">
+                        <span class="material-symbols-outlined text-green-600 text-4xl">verified</span>
+                        <span>Checkatrade</span>
+                    </div>
+                    <div class="flex items-center gap-2 font-bold text-xl text-gray-800 dark:text-gray-300">
+                        <span class="material-symbols-outlined text-red-600 text-4xl">engineering</span>
+                        <span>Worcester</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Call to Action -->
+        <section class="py-20 px-6 bg-[#221910] text-white relative overflow-hidden">
+            <!-- Decorative circle -->
+            <div
+                class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary rounded-full opacity-10 blur-3xl pointer-events-none">
+            </div>
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to upgrade your home comfort?</h2>
+                <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+                    Whether you need an emergency repair or a full system installation, our expert team is ready to
+                    help. Get a free, no-obligation quote today.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button
+                        class="bg-primary hover:bg-[#d66e0b] text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors shadow-lg hover:shadow-primary/20">
+                        Get a Free Quote
+                    </button>
+                    <button
+                        class="bg-transparent border-2 border-white hover:bg-white hover:text-[#221910] text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors">
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-secondary text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center mb-16">
+                <div class="text-center">
+                    <span
+                        class="font-display font-black text-5xl lg:text-7xl tracking-tighter text-white opacity-20 select-none">VANTAGE</span>
+                    <div
+                        class="font-display font-bold text-xl lg:text-2xl tracking-[0.5em] text-primary -mt-2 lg:-mt-4 uppercase">
+                        Heating</div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 border-b border-gray-700 pb-12">
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-white">About Us</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Vantage Heating is your local expert for all plumbing and heating needs. Dedicated to quality,
+                        transparency, and reliability.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="text-gray-400 hover:text-white transition" href="#"><i
+                                class="material-symbols-outlined">facebook</i></a>
+                        <a class="text-gray-400 hover:text-white transition" href="#"><i
+                                class="material-symbols-outlined">linked_camera</i></a>
+                        <a class="text-gray-400 hover:text-white transition" href="#"><i
+                                class="material-symbols-outlined">alternate_email</i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-white">Company Info</h4>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li><a class="hover:text-primary transition" href="about.html">About Us</a></li>
+                        <li><a class="hover:text-primary transition" href="services.html">Our Services</a></li>
+                        <li><a class="hover:text-primary transition" href="pricing.html">Pricing</a></li>
+                        <li><a class="hover:text-primary transition" href="gallery.html">Gallery</a></li>
+                        <li><a class="hover:text-primary transition" href="contact.html">Contact Us</a></li>
+                        <li><a class="hover:text-primary transition" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-white">Services</h4>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li><a class="hover:text-primary transition" href="services.html">Boiler Installations</a></li>
+                        <li><a class="hover:text-primary transition" href="services.html">Boiler Repairs</a></li>
+                        <li><a class="hover:text-primary transition" href="services.html">Power Flushing</a></li>
+                        <li><a class="hover:text-primary transition" href="services.html">Smart Heating</a></li>
+                        <li><a class="hover:text-primary transition" href="services.html">Leak Detection</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-white">Opening Hours</h4>
+                    <p class="text-gray-400 text-sm mb-2"><span class="text-white font-semibold">Saturday -
+                            Monday:</span><br />Open 24 Hours (Emergency)</p>
+                    <p class="text-gray-400 text-sm"><span class="text-white font-semibold">Tuesday -
+                            Friday:</span><br />8:00 AM - 8:00 PM</p>
+                </div>
+            </div>
+            <div class="text-center text-gray-500 text-xs">
+                © 2023 Vantage Heating. All rights reserved. Designed for excellence.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

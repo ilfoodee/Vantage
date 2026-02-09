@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Vantage Heating - Contact Us</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#CD7F32",
+                        "primary-dark": "#A05F20",
+                        "secondary": "#1F2937",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#111827",
+                        "surface-light": "#F3F4F6",
+                        "surface-dark": "#1F2937",
+                        "text-light": "#1F2937",
+                        "text-dark": "#F9FAFB",
+                        "accent-light": "#E5E7EB",
+                        "accent-dark": "#374151"
+                    },
+                    fontFamily: {
+                        display: ["Montserrat", "sans-serif"],
+                        body: ["Open Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .copper-glow:focus-within {
+            box-shadow: 0 0 0 2px rgba(236, 109, 19, 0.3);
+            border-color: #ec6d13;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-50 min-h-screen flex flex-col font-display">
+    <!-- Top Navigation -->
+    <div class="bg-secondary text-white text-sm py-2 px-4 hidden md:block">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">call</span> 0800
+                    123 4567</span>
+                <span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">schedule</span>
+                    Open 24/7 for Emergencies</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-2"><span
+                        class="material-symbols-outlined text-sm text-primary">star</span> 5-Star Service Rating</span>
+                <a class="hover:text-primary transition" href="index.html">info@vantageheating.com</a>
+            </div>
+        </div>
+    </div>
+    <nav class="bg-background-light dark:bg-surface-dark shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <img alt="Vantage Heating Logo" class="h-10 w-auto object-contain hidden"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuADT4sKNSmhcSASbG7L1idjcLQtwvUErHTwFgoepF_ulUgpEmzrcKj8f9lrxwYEe2IHABZuBPgrSxuuIbTDkEI_B5IIWV4iE0XG3qmOO1m-xJTGyPRa_WrVmE4sMyOcatv5iOPKaFwzto1Snu_uK2DbfJJBxTX6VkDOIBmV5JL-TE_e041dn9c-7DcyEGwdljxWqUtWkYymUI-ok-kCrU1Jbup36hKivzEsMUbm5lbeWb3OJi2kXScWfR2JNeibCoAI85vLr0cFzmE" />
+                    <div class="flex flex-col">
+                        <span
+                            class="font-display font-bold text-2xl tracking-tight text-secondary dark:text-white">VANTAGE
+                            <span class="text-primary">HEATING</span></span>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center space-x-8 font-medium">
+                    <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="index.html">Home</a>
+                    <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="about.html">About Us</a>
+                    <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="services.html">Services</a>
+                    <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="pricing.html">Pricing</a>
+                    <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="gallery.html">Gallery</a>
+                    <a class="text-primary dark:text-primary" href="contact.html">Contact</a>
+                </div>
+                <div class="hidden lg:block">
+                    <a class="bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg hover:shadow-xl flex items-center gap-2"
+                        href="contact.html">
+                        <span class="material-symbols-outlined text-sm">calendar_month</span>
+                        Book Appointment
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-text-light dark:text-white p-2">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white dark:bg-surface-dark border-t border-gray-200 dark:border-gray-700 absolute top-full left-0 w-full shadow-lg z-40">
+            <ul class="flex flex-col p-4 space-y-4 font-medium text-center">
+                <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="index.html">Home</a></li>
+                <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="about.html">About Us</a></li>
+                <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="services.html">Services</a></li>
+                <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="pricing.html">Pricing</a></li>
+                <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="gallery.html">Gallery</a></li>
+                <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                        href="contact.html">Contact</a></li>
+                <li class="flex justify-center">
+                    <a class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg hover:shadow-xl"
+                        href="contact.html">
+                        <span class="material-symbols-outlined text-sm">calendar_month</span>
+                        Book Appointment
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <script>
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        </script>
+    </nav>
+    <!-- Main Content Area -->
+    <main class="flex-grow flex flex-col">
+        <!-- Hero & Contact Section -->
+        <section class="relative py-12 md:py-20 px-4 md:px-10 lg:px-40 bg-gradient-dark">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-24">
+                <!-- Left Column: Contact Info -->
+                <div class="flex flex-col gap-8 justify-center">
+                    <div class="space-y-4">
+                        <span
+                            class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-bold text-primary border border-primary/20 w-fit">
+                            <span class="relative flex h-2 w-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                            </span>
+                            24/7 Emergency Support Available
+                        </span>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight">
+                            Get in Touch
+                        </h1>
+                        <p class="text-[#c9a992] text-lg md:text-xl font-normal leading-relaxed max-w-lg">
+                            Expert heating solutions are just a call away. Whether it's a routine check-up or an
+                            emergency repair, our team is ready to help.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-4 mt-4">
+                        <!-- Phone Card -->
+                        <div
+                            class="group flex items-center gap-5 rounded-xl border border-border-dark bg-surface-dark p-5 transition-all hover:border-primary/50 hover:bg-[#362b22]">
+                            <div
+                                class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                <span class="material-symbols-outlined">call</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <p class="text-[#c9a992] text-sm font-medium">Emergency Line</p>
+                                <p class="text-white text-xl font-bold tracking-tight">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <!-- Email Card -->
+                        <div
+                            class="group flex items-center gap-5 rounded-xl border border-border-dark bg-surface-dark p-5 transition-all hover:border-primary/50 hover:bg-[#362b22]">
+                            <div
+                                class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                <span class="material-symbols-outlined">mail</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <p class="text-[#c9a992] text-sm font-medium">General Inquiries</p>
+                                <p class="text-white text-lg font-bold tracking-tight">support@vantageheating.com</p>
+                            </div>
+                        </div>
+                        <!-- Location Card -->
+                        <div
+                            class="group flex items-center gap-5 rounded-xl border border-border-dark bg-surface-dark p-5 transition-all hover:border-primary/50 hover:bg-[#362b22]">
+                            <div
+                                class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                <span class="material-symbols-outlined">location_on</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <p class="text-[#c9a992] text-sm font-medium">Office Location</p>
+                                <p class="text-white text-lg font-bold tracking-tight">123 Industrial Park, Heatington,
+                                    UK</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Social Icons -->
+                    <div class="flex gap-4 mt-4">
+                        <a class="flex h-10 w-10 items-center justify-center rounded-full bg-surface-dark border border-border-dark text-[#c9a992] hover:bg-primary hover:border-primary hover:text-white transition-all"
+                            href="index.html">
+                            <!-- Facebook Icon placeholder using material symbol for generic social representation or similar visual -->
+                            <span class="font-bold text-lg">f</span>
+                        </a>
+                        <a class="flex h-10 w-10 items-center justify-center rounded-full bg-surface-dark border border-border-dark text-[#c9a992] hover:bg-primary hover:border-primary hover:text-white transition-all"
+                            href="index.html">
+                            <span class="font-bold text-lg">t</span>
+                        </a>
+                        <a class="flex h-10 w-10 items-center justify-center rounded-full bg-surface-dark border border-border-dark text-[#c9a992] hover:bg-primary hover:border-primary hover:text-white transition-all"
+                            href="index.html">
+                            <span class="font-bold text-lg">in</span>
+                        </a>
+                        <a class="flex h-10 w-10 items-center justify-center rounded-full bg-surface-dark border border-border-dark text-[#c9a992] hover:bg-primary hover:border-primary hover:text-white transition-all"
+                            href="index.html">
+                            <span class="font-bold text-lg">ig</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Right Column: Contact Form -->
+                <div
+                    class="bg-surface-dark rounded-2xl p-8 border border-border-dark shadow-2xl relative overflow-hidden">
+                    <!-- Subtle decorative glow -->
+                    <div
+                        class="absolute -top-20 -right-20 w-40 h-40 bg-primary/20 blur-[80px] rounded-full pointer-events-none">
+                    </div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Request a Callback or Quote</h3>
+                        <p class="text-[#c9a992] mb-8 text-sm">Fill out the form below and we will get back to you
+                            shortly.</p>
+                        <form class="space-y-5">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div class="space-y-1.5">
+                                    <label class="text-sm font-medium text-white ml-1" for="name">Full Name</label>
+                                    <input
+                                        class="w-full rounded-lg bg-[#221811] border border-border-dark text-white px-4 py-3 placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                                        id="name" placeholder="John Doe" type="text" />
+                                </div>
+                                <div class="space-y-1.5">
+                                    <label class="text-sm font-medium text-white ml-1" for="phone">Phone Number</label>
+                                    <input
+                                        class="w-full rounded-lg bg-[#221811] border border-border-dark text-white px-4 py-3 placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                                        id="phone" placeholder="+1 (555) 000-0000" type="tel" />
+                                </div>
+                            </div>
+                            <div class="space-y-1.5">
+                                <label class="text-sm font-medium text-white ml-1" for="email">Email Address</label>
+                                <input
+                                    class="w-full rounded-lg bg-[#221811] border border-border-dark text-white px-4 py-3 placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                                    id="email" placeholder="john@example.com" type="email" />
+                            </div>
+                            <div class="space-y-1.5">
+                                <label class="text-sm font-medium text-white ml-1" for="service">Service
+                                    Required</label>
+                                <div class="relative">
+                                    <select
+                                        class="w-full appearance-none rounded-lg bg-[#221811] border border-border-dark text-white px-4 py-3 pr-10 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                                        id="service">
+                                        <option disabled="" selected="" value="">Select a service</option>
+                                        <option value="boiler-repair">Boiler Repair</option>
+                                        <option value="heating-installation">Heating Installation</option>
+                                        <option value="plumbing">General Plumbing</option>
+                                        <option value="maintenance">Annual Maintenance</option>
+                                        <option value="emergency">Emergency Service</option>
+                                    </select>
+                                    <div
+                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-[#c9a992]">
+                                        <span class="material-symbols-outlined">expand_more</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-1.5">
+                                <label class="text-sm font-medium text-white ml-1" for="message">Message</label>
+                                <textarea
+                                    class="w-full rounded-lg bg-[#221811] border border-border-dark text-white px-4 py-3 placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"
+                                    id="message" placeholder="Describe your issue or request..." rows="4"></textarea>
+                            </div>
+                            <button
+                                class="w-full bg-primary hover:bg-[#d65c0a] text-white font-bold py-4 rounded-lg transition-all transform active:scale-[0.99] flex items-center justify-center gap-2 mt-2"
+                                type="button">
+                                <span>Submit Request</span>
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Map Section -->
+        <section class="w-full h-[400px] md:h-[500px] relative bg-[#221811] border-t border-border-dark">
+            <!-- Overlay to darken map slightly to match theme -->
+            <div class="absolute inset-0 bg-[#221811]/10 z-10 pointer-events-none"></div>
+            <iframe allowfullscreen="" data-location="London, UK" height="100%" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.546465492945!2d-0.1277583842302386!3d51.50735097963498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c7c0000001%3A0x6d0a790539656e1!2sLondon%2C%20UK!5e0!3m2!1sen!2sus!4v1652876543210!5m2!1sen!2sus"
+                style="border:0; filter: grayscale(100%) invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);"
+                title="Vantage Heating Service Area Map" width="100%">
+            </iframe>
+            <!-- Map Card Overlay (Floating) -->
+            <div
+                class="absolute bottom-6 left-6 z-20 bg-surface-dark border border-border-dark p-4 rounded-lg shadow-lg max-w-xs hidden sm:block">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="bg-primary/20 p-2 rounded-full text-primary">
+                        <span class="material-symbols-outlined text-sm">map</span>
+                    </div>
+                    <h4 class="text-white font-bold text-sm">Serving Greater Heatington</h4>
+                </div>
+                <p class="text-[#c9a992] text-xs">We cover a 50-mile radius from our central office. Call us to check if
+                    we service your postcode.</p>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#1a120b] border-t border-[#483323] pt-12 pb-6 px-4 md:px-10 lg:px-40">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-8">
+            <div class="flex items-center gap-2">
+                <div class="size-6 text-primary">
+                    <span class="material-symbols-outlined">hvac</span>
+                </div>
+                <span class="text-white font-bold text-xl">Vantage Heating</span>
+            </div>
+            <div class="flex flex-wrap gap-6 text-[#c9a992] text-sm font-medium">
+                <a class="hover:text-primary transition-colors" href="index.html">Privacy Policy</a>
+                <a class="hover:text-primary transition-colors" href="index.html">Terms of Service</a>
+                <a class="hover:text-primary transition-colors" href="index.html">Cookie Settings</a>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto border-t border-[#483323] pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-[#674832] text-sm">© 2024 Vantage Heating. All rights reserved.</p>
+            <div class="flex gap-4">
+                <a class="text-[#674832] hover:text-primary transition-colors" href="index.html"><span
+                        class="material-symbols-outlined text-lg">social_leaderboard</span></a>
+                <a class="text-[#674832] hover:text-primary transition-colors" href="index.html"><span
+                        class="material-symbols-outlined text-lg">water_drop</span></a>
+                <!-- Representing Twitter/X abstractly if icon unavailable -->
+                <a class="text-[#674832] hover:text-primary transition-colors" href="index.html"><span
+                        class="material-symbols-outlined text-lg">photo_camera</span></a> <!-- Instagram -->
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

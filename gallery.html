@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Vantage Heating - Gallery</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#CD7F32",
+                        "primary-dark": "#A05F20",
+                        "secondary": "#1F2937",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#111827",
+                        "surface-light": "#F3F4F6",
+                        "surface-dark": "#1F2937",
+                        "text-light": "#1F2937",
+                        "text-dark": "#F9FAFB",
+                        "accent-light": "#E5E7EB",
+                        "accent-dark": "#374151"
+                    },
+                    fontFamily: {
+                        display: ["Montserrat", "sans-serif"],
+                        body: ["Open Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        /* Custom scrollbar for masonry if needed */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Interactive slider styles */
+        .comparison-slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .comparison-slider input[type="range"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: ew-resize;
+            z-index: 20;
+        }
+
+        .comparison-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .comparison-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 50%;
+            /* Initial split */
+            overflow: hidden;
+        }
+
+        .comparison-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #fff;
+            cursor: ew-resize;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
+
+        .comparison-handle span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: #CD7F32;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #fff;
+            pointer-events: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white transition-colors duration-200">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Header -->
+        <div class="bg-secondary text-white text-sm py-2 px-4 hidden md:block">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center space-x-6">
+                    <span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">call</span>
+                        0800 123 4567</span>
+                    <span class="flex items-center gap-2"><span
+                            class="material-symbols-outlined text-sm">schedule</span> Open 24/7 for Emergencies</span>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <span class="flex items-center gap-2"><span
+                            class="material-symbols-outlined text-sm text-primary">star</span> 5-Star Service
+                        Rating</span>
+                    <a class="hover:text-primary transition" href="index.html">info@vantageheating.com</a>
+                </div>
+            </div>
+        </div>
+        <nav class="bg-background-light dark:bg-surface-dark shadow-md sticky top-0 z-50">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-3">
+                        <img alt="Vantage Heating Logo" class="h-10 w-auto object-contain hidden"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuADT4sKNSmhcSASbG7L1idjcLQtwvUErHTwFgoepF_ulUgpEmzrcKj8f9lrxwYEe2IHABZuBPgrSxuuIbTDkEI_B5IIWV4iE0XG3qmOO1m-xJTGyPRa_WrVmE4sMyOcatv5iOPKaFwzto1Snu_uK2DbfJJBxTX6VkDOIBmV5JL-TE_e041dn9c-7DcyEGwdljxWqUtWkYymUI-ok-kCrU1Jbup36hKivzEsMUbm5lbeWb3OJi2kXScWfR2JNeibCoAI85vLr0cFzmE" />
+                        <div class="flex flex-col">
+                            <span
+                                class="font-display font-bold text-2xl tracking-tight text-secondary dark:text-white">VANTAGE
+                                <span class="text-primary">HEATING</span></span>
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex items-center space-x-8 font-medium">
+                        <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                            href="index.html">Home</a>
+                        <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                            href="about.html">About Us</a>
+                        <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                            href="services.html">Services</a>
+                        <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                            href="pricing.html">Pricing</a>
+                        <a class="text-primary dark:text-primary" href="gallery.html">Gallery</a>
+                        <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                            href="contact.html">Contact</a>
+                    </div>
+                    <div class="hidden lg:block">
+                        <a class="bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg hover:shadow-xl flex items-center gap-2"
+                            href="contact.html">
+                            <span class="material-symbols-outlined text-sm">calendar_month</span>
+                            Book Appointment
+                        </a>
+                    </div>
+                    <button id="mobile-menu-btn" class="lg:hidden text-text-light dark:text-white p-2">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="hidden lg:hidden bg-white dark:bg-surface-dark border-t border-gray-200 dark:border-gray-700 absolute top-full left-0 w-full shadow-lg z-40">
+                <ul class="flex flex-col p-4 space-y-4 font-medium text-center">
+                    <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                            href="index.html">Home</a></li>
+                    <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                            href="about.html">About Us</a></li>
+                    <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                            href="services.html">Services</a></li>
+                    <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                            href="pricing.html">Pricing</a></li>
+                    <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                            href="gallery.html">Gallery</a></li>
+                    <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
+                            href="contact.html">Contact</a></li>
+                    <li class="flex justify-center">
+                        <a class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg hover:shadow-xl"
+                            href="contact.html">
+                            <span class="material-symbols-outlined text-sm">calendar_month</span>
+                            Book Appointment
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+
+                if (mobileMenuBtn && mobileMenu) {
+                    mobileMenuBtn.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                    });
+                }
+            </script>
+        </nav>
+        <main class="flex-grow flex flex-col items-center">
+            <!-- Hero Section -->
+            <section class="w-full relative min-h-[400px] flex items-center justify-center bg-gray-900">
+                <div class="absolute inset-0 z-0">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT2eWRH9bfwBFIT-CNgoUTqNOAFivrf3LeONFNAigxfIYLyjRBI4s-3YHpKGNd-8O6Cbe2lIeTms_hhrKt-98Sebrry8V2tFh8UBaue_wJt0ocEg7dIQEPRFsRMOJI4gomX0KUoETmEviQshjRRHeFVuHNxpUcUV-SpeejiyqD824WPhEAb6ttaxGzxpORkcOkrk1c6cEybxMhNDGZEe7kuH84d8T-zpbQAYRLUFBHnT3vwFLpVZoS_HUjM_kZ28p1TxpZ2c16eIo"
+                        alt="Bathroom Background" class="w-full h-full object-cover opacity-60" />
+                    <div class="absolute inset-0 bg-black/60"></div>
+                </div>
+                <div class="relative z-10 flex flex-col gap-4 text-center max-w-[800px] px-4">
+                    <h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
+                        Our Craftsmanship
+                    </h1>
+                    <p class="text-gray-200 text-lg md:text-xl font-normal leading-relaxed">
+                        Explore our portfolio of precision heating installations and luxury bathroom renovations
+                        across the region.
+                    </p>
+                </div>
+            </section>
+            <!-- Before & After Section -->
+            <section class="w-full max-w-[1280px] px-4 py-16">
+                <div class="flex flex-col md:flex-row gap-8 items-center mb-10">
+                    <div class="flex-1">
+                        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Transformation in Action</h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-lg mb-6">See the dramatic difference a
+                            professional installation makes. Drag the slider to compare the old system with our sleek
+                            new upgrade.</p>
+                        <div class="flex gap-4">
+                            <div class="flex items-center gap-2">
+                                <span class="size-3 rounded-full bg-gray-500"></span>
+                                <span class="text-sm font-medium text-gray-500 dark:text-gray-400">Before</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="size-3 rounded-full bg-primary"></span>
+                                <span class="text-sm font-medium text-primary">After</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Interactive Slider Component -->
+                    <div
+                        class="w-full md:w-2/3 lg:w-3/5 h-[400px] rounded-xl overflow-hidden shadow-2xl relative group">
+                        <div class="comparison-slider">
+                            <div class="comparison-item w-full h-full absolute"
+                                data-alt="Modern sleek white bathroom renovation after completion"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA3dqdOMKCw1gMJ4yYgYIby1bb8MGoALf7hBo_DcB0rkS8ahuLQgMqSoZ5uSHyKrVQc_mKB0Tt9GuakFLtIFUIoCrpZQK35F5le8mXUOnZbdFi4t9izVhphcmV8ExKsxYbXKTyU9lCmCerE6KM4F6kq8fQzXtn3iizPKwyN6wZ6aVz7eDnqVMzegO6iTSF0NEEKbnU36nifz97bjdruznB_QR_Fmgq19NRIpWmQo4Pxz1e6Lw5uw_89DGlgKdZzjA-lImrX-i_SnNE");'>
+                                <span
+                                    class="absolute top-4 right-4 bg-primary/90 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">After</span>
+                            </div>
+                            <div class="comparison-overlay w-1/2 absolute top-0 left-0 h-full overflow-hidden"
+                                id="overlay">
+                                <div class="w-[200%] h-full absolute top-0 left-0 bg-cover bg-center"
+                                    data-alt="Old outdated bathroom with worn tiles before renovation"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAy2CfQMUnFID5MGnGWD5FDm7U6xq6X_EQZJvCmG-1fwPqpZa-wWEBZUupPj5l57F05zQWwYfYWM3i0uvZYFfsFUViNgmfQ1c7PPuCYWO4l4ePMyPXx3JE07o9vLo5_AUuP6vjNqfyDmVRN-oGquQw1Z8LS9bAKo2yUGYSX3BsVMtAiM4tAAZmDVqpPT247ag2CexgRXuBYzI5-6YYWUfiVuFL6CmE69W7XFk42j4AlNkO519mAp2v-KTaMaGvghNmzs4qD19pzP6s");'>
+                                </div>
+                                <span
+                                    class="absolute top-4 left-4 bg-gray-800/90 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">Before</span>
+                            </div>
+                            <div class="comparison-handle" id="handle" style="left: 50%">
+                                <span class="material-symbols-outlined text-white text-xl">code</span>
+                            </div>
+                            <input class="w-full h-full absolute top-0 left-0 opacity-0 cursor-ew-resize z-20" max="100"
+                                min="0" oninput="updateSlider(this.value)" type="range" value="50" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Gallery Filter Bar -->
+            <section
+                class="w-full bg-surface-light dark:bg-surface-dark py-4 sticky top-[72px] z-30 shadow-sm transition-colors duration-200">
+                <div class="max-w-[1280px] mx-auto px-4 overflow-x-auto no-scrollbar">
+                    <div class="flex gap-2 min-w-max">
+                        <button
+                            class="px-6 py-2 rounded-full bg-primary text-white text-sm font-bold shadow-md hover:bg-primary-dark transition-all">All
+                            Projects</button>
+                        <button
+                            class="px-6 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium transition-all shadow-sm">Boiler
+                            Installs</button>
+                        <button
+                            class="px-6 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium transition-all shadow-sm">Luxury
+                            Bathrooms</button>
+                        <button
+                            class="px-6 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium transition-all shadow-sm">Underfloor
+                            Heating</button>
+                        <button
+                            class="px-6 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium transition-all shadow-sm">Commercial</button>
+                    </div>
+                </div>
+            </section>
+            <!-- Masonry Grid -->
+            <section class="w-full max-w-[1280px] px-4 py-12">
+                <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                    <!-- Gallery Item 1 -->
+                    <div class="break-inside-avoid relative group rounded-xl overflow-hidden shadow-lg cursor-pointer">
+                        <img alt="Modern kitchen heating installation"
+                            class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Modern kitchen interior with sleek heating elements"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRaz5ascBrbV8ff-RYo23qigovB2RXDuKZCoeBxsjvC4VpsgEiL3SdjQABZPV3xtiS5dmqyAGFDIK4Jyw9WBq7Dncwv-Birm8ImbJ7Wm3xRULPMAUOBT41_Yy4AW8ho3DyuTCbijQEvSGE_yVAQtIYUbvMRvjSOXtS_ZTEjM3_X-TKB3o3L4WgDDEcBHg6p2CdTUeXBa_98YZ9OM3D2fjebCsn_aH6IODlWAIhoxeAAWqxRoVy9IMM5wbAfRAyyE60bb7yjvbNIoI" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h3
+                                class="text-white font-bold text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                Underfloor System</h3>
+                            <p
+                                class="text-gray-300 text-sm mt-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                                Kitchen Renovation, Leeds</p>
+                            <span
+                                class="text-primary text-xs font-bold mt-3 uppercase tracking-wider translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">View
+                                Project</span>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 2 -->
+                    <div class="break-inside-avoid relative group rounded-xl overflow-hidden shadow-lg cursor-pointer">
+                        <img alt="Industrial boiler room piping system"
+                            class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Complex copper piping system in industrial boiler room"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOzT9wY6M54v0MxCPMDRI-w4dvqShdABudLBlzvJ05b-KaU0WGZoUatUkDqBrYf3RYbyLuMYWoCbcveTs95j87kCiK8tWvi3DJOoG4gITEUhPt3MENptbV-K6pD8EXrHbtc0wj2wyWTfJgcbTUwiNDkbiMWTk6eBOBIGTSQ6XJZFrJ_FxQ3AniDAIBoOGUDhCFBPRJ7ohITwX-bAmMAXc2ocoLren8lZAvE6MZ8q5ISZ5yabp8g7rhNBsWfHAi_IqbCPFv_eyArAE" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h3
+                                class="text-white font-bold text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                Commercial Boiler</h3>
+                            <p
+                                class="text-gray-300 text-sm mt-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                                Office Complex, Manchester</p>
+                            <span
+                                class="text-primary text-xs font-bold mt-3 uppercase tracking-wider translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">View
+                                Project</span>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 3 -->
+                    <div class="break-inside-avoid relative group rounded-xl overflow-hidden shadow-lg cursor-pointer">
+                        <img alt="Luxury bathroom with freestanding tub"
+                            class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Elegant bathroom with white freestanding bathtub and grey tiles"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm34QRjSQ3Pi4ueNapwVqwpw_ESgrynqiQip3Ih8x08mXXbceiS__uspOE3-16kesYWHUwzD_cuW8F4x-eOEwf7GcF3d7iQkoEO445fy1xv0EKQf9DpYLcH166tMo6oPfcppO2nVdqEeIBy2g2LAefCth54t6yric35xcYjJMl6fEVGQbnAQoJZF02Uc7fs33ZXd833snXufe2Vv5SmVF6tFyc2wL1N9rUENmqYvtXpS0VVt06BGFFhs6YVcNSf50gRdV6n43PEWw" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h3
+                                class="text-white font-bold text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                Luxury Suite</h3>
+                            <p
+                                class="text-gray-300 text-sm mt-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                                Residential, Cheshire</p>
+                            <span
+                                class="text-primary text-xs font-bold mt-3 uppercase tracking-wider translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">View
+                                Project</span>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 4 -->
+                    <div class="break-inside-avoid relative group rounded-xl overflow-hidden shadow-lg cursor-pointer">
+                        <img alt="Close up of modern radiator valve"
+                            class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Detailed shot of chrome radiator valve on white panel"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPKuoRELRB_Kjp5i9SxExBuZOAaGpDKgy7yH72LSaKTdDwZbl3IMzRmhzRmbAhA9vrjVgmJobeHRXiv1XohdLNafhrSkNB1JrdvSWMEFllA65jHakspWDvdVuoYrLX-OtSH2-b0uV753xdt2rKEDFcEC--8c0y9pE8Gmb4Q5IiWzvHgLskmY-uZi_sk2R_80WlpYkSB2ZapGLrSamp7z9pHhMukww6b6VZjWeRCuiHU4jvx5Nr-8Xlr21MH8hXSumbSKKvWBXSym4" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h3
+                                class="text-white font-bold text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                Smart Heating Controls</h3>
+                            <p
+                                class="text-gray-300 text-sm mt-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                                Home Automation, York</p>
+                            <span
+                                class="text-primary text-xs font-bold mt-3 uppercase tracking-wider translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">View
+                                Project</span>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 5 -->
+                    <div class="break-inside-avoid relative group rounded-xl overflow-hidden shadow-lg cursor-pointer">
+                        <img alt="Modern heat pump installation outdoor unit"
+                            class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Outdoor heat pump unit installed near modern home wall"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7FTQ6t6LCa6Q5jN3YR1WKSTLyJGNEBeoDILvAtvKla1kQ04JNOdUhD_ppozMmEf5W7fn_pILVBZZ5cXpQp58ZgR4zhLMWmK1ONLnBZC7IkPgd3MSFexsRj6kt1ZV4gvE0Pk7kzjI2aKuHAQAA4By1l0ra-vInIiGR2vzJmM0a6DD24lq5OrQmMSIeOJytbffmDzwOl35w20SFAvyuO55o_JES-1j3vNCuT30GaHQRjxqXoJuAdKKv3zIcnAR-XbOl3d911qGuI1U" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h3
+                                class="text-white font-bold text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                Eco Heat Pump</h3>
+                            <p
+                                class="text-gray-300 text-sm mt-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                                Sustainable Living, Harrogate</p>
+                            <span
+                                class="text-primary text-xs font-bold mt-3 uppercase tracking-wider translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">View
+                                Project</span>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 6 -->
+                    <div class="break-inside-avoid relative group rounded-xl overflow-hidden shadow-lg cursor-pointer">
+                        <img alt="Spacious shower room with glass partition"
+                            class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Minimalist shower room with glass wall and rain shower head"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAKHFd3IddQ3yfuoi4zyYF6t6ejVJPGZamqjR6eY0eoMtqYorNM5EDmsvsbEWqVEJAv2pqeDyZMWp7BHCtPe_iS90kp7Xti7FinGNTniYEBtqpolk51Um0hEfJEpE4tD4BOsBl-RJ9s0G1eggIM8pdAaZk6_8_seF0zwE8HOqzsyj-JoT7R9DEXerOI_1uZEQ4vF54eHCIzBlmHDlsuUO2hwopsvOxz6GYnMXfvDPmnd2dQXzLMNH_kf_Sq8qnwe4wze55uw8EW8Y" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h3
+                                class="text-white font-bold text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                Wet Room Conversion</h3>
+                            <p
+                                class="text-gray-300 text-sm mt-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                                Accessibility Project, Sheffield</p>
+                            <span
+                                class="text-primary text-xs font-bold mt-3 uppercase tracking-wider translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">View
+                                Project</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Load More -->
+            <div class="w-full flex justify-center pb-16">
+                <button
+                    class="flex items-center gap-2 px-8 py-3 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-700 dark:text-gray-300 hover:border-primary hover:text-primary transition-colors font-bold">
+                    <span>Load More Projects</span>
+                    <span class="material-symbols-outlined text-sm">expand_more</span>
+                </button>
+            </div>
+            <!-- CTA Section -->
+            <section class="w-full bg-primary relative overflow-hidden py-16 px-4">
+                <div
+                    class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
+                </div>
+                <div class="relative max-w-4xl mx-auto text-center text-white flex flex-col items-center gap-6">
+                    <h2 class="text-3xl md:text-4xl font-black tracking-tight">Ready to upgrade your home's heating?
+                    </h2>
+                    <p class="text-blue-100 text-lg max-w-2xl">From initial consultation to the final installation,
+                        experience the Vantage standard of quality and service.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 mt-4">
+                        <button
+                            class="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg font-bold text-lg transition-colors shadow-lg">Get
+                            a Free Quote</button>
+                        <button
+                            class="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-3 rounded-lg font-bold text-lg transition-colors">Contact
+                            Us</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-gray-400 py-12 px-6 border-t border-gray-800">
+            <div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 text-white mb-4">
+                        <div class="size-6 text-primary">
+                            <svg class="w-full h-full" fill="none" viewbox="0 0 48 48"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.263 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <span class="font-bold text-lg">Vantage Heating</span>
+                    </div>
+                    <p class="text-sm leading-relaxed">Precision heating solutions and luxury bathroom renovations for
+                        modern homes.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="index.html">Boiler Installation</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="index.html">Underfloor Heating</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="index.html">Bathroom Design</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="index.html">Emergency Repairs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="index.html">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="index.html">Gallery</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="index.html">Testimonials</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="index.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-base">call</span> 0161 123 4567</li>
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-base">mail</span> info@vantageheating.co.uk</li>
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-base">location_on</span> Manchester, UK</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                <p>© 2024 Vantage Heating. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a class="hover:text-white transition-colors" href="index.html">Privacy Policy</a>
+                    <a class="hover:text-white transition-colors" href="index.html">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function updateSlider(val) {
+            const overlay = document.getElementById('overlay');
+            const handle = document.getElementById('handle');
+            overlay.style.width = val + "%";
+            handle.style.left = val + "%";
+        }
+    </script>
+</body>
+
+</html>
