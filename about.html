@@ -7,51 +7,103 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Vantage Heating - About Us</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
         rel="stylesheet" />
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#CD7F32",
-                        "primary-dark": "#A05F20",
-                        "secondary": "#1F2937",
-                        "background-light": "#FFFFFF",
-                        "background-dark": "#111827",
-                        "surface-light": "#F3F4F6",
-                        "surface-dark": "#1F2937",
-                        "text-light": "#1F2937",
-                        "text-dark": "#F9FAFB",
-                        "accent-light": "#E5E7EB",
-                        "accent-dark": "#374151"
-                    },
-                    fontFamily: {
-                        display: ["Montserrat", "sans-serif"],
-                        body: ["Open Sans", "sans-serif"],
-                    },
-                    borderRadius: {
-                        DEFAULT: "0.5rem",
-                        'xl': '1rem',
-                        '2xl': '1.5rem',
-                    },
-                },
-            },
-        };
-    </script>
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings:
-                'FILL' 0,
-                'wght' 400,
-                'GRAD' 0,
-                'opsz' 24
-        }
-    </style>
+      <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0369A1",
+            "primary-dark": "#075985",
+            "secondary": "#0F172A",
+            "background-light": "#F8FAFC",
+            "background-dark": "#0F172A",
+            "surface-light": "#FFFFFF",
+            "surface-dark": "#1E293B",
+            "text-light": "#020617",
+            "text-dark": "#F8FAFC",
+            "accent-light": "#E2E8F0",
+            "accent-dark": "#334155"
+          },
+          fontFamily: {
+            display: ["Poppins", "sans-serif"],
+            body: ["Open Sans", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+            'xl': '1rem',
+            '2xl': '1.5rem',
+          },
+        },
+      },
+    };
+  </script>
+      <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+    
+    .btn-primary {
+      background: #0369A1;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 200ms ease;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #0F172A;
+      border: 2px solid #0F172A;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 200ms ease;
+      cursor: pointer;
+    }
+
+    .card {
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: all 200ms ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+
+    .input {
+      padding: 12px 16px;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 200ms ease;
+    }
+
+    .input:focus {
+      border-color: #0F172A;
+      outline: none;
+      box-shadow: 0 0 0 3px #0F172A20;
+    }
+  </style>
 </head>
 
 <body
@@ -68,7 +120,7 @@
             <div class="flex items-center space-x-6">
                 <span class="flex items-center gap-2"><span
                         class="material-symbols-outlined text-sm text-primary">star</span> 5-Star Service Rating</span>
-                <a class="hover:text-primary transition" href="index.html">info@vantageheating.com</a>
+                <a class="hover:text-primary transition" href="index.html">hello@vantageheating.co.uk</a>
             </div>
         </div>
     </div>
@@ -98,7 +150,7 @@
                         href="contact.html">Contact</a>
                 </div>
                 <div class="hidden lg:block">
-                    <a class="bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg hover:shadow-xl flex items-center gap-2"
+                    <a class="btn-primary flex items-center gap-2 shadow-md"
                         href="contact.html">
                         <span class="material-symbols-outlined text-sm">calendar_month</span>
                         Book Appointment
@@ -126,7 +178,7 @@
                 <li><a class="block text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition"
                         href="contact.html">Contact</a></li>
                 <li class="flex justify-center">
-                    <a class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg hover:shadow-xl"
+                    <a class="btn-primary inline-flex items-center gap-2 shadow-md"
                         href="contact.html">
                         <span class="material-symbols-outlined text-sm">calendar_month</span>
                         Book Appointment
@@ -187,18 +239,31 @@
                 <div class="flex flex-col gap-6">
                     <div class="flex flex-col gap-2">
                         <span class="text-primary font-bold uppercase tracking-wider text-sm">Our Story</span>
-                        <h2 class="text-3xl md:text-4xl font-bold text-[#1b140d] dark:text-white leading-tight">From a
-                            Single Van to a Trusted Name</h2>
+                        <h2 class="text-3xl md:text-4xl font-bold text-[#1b140d] dark:text-white leading-tight">About
+                            Vantage Heating</h2>
                     </div>
                     <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-                        Founded on the principles of hard work and honest pricing, Vantage Heating started as a small
-                        family operation. We believed that if you treat customers like neighbors, the business will take
-                        care of itself.
+                        From your very first conversation with us to the moment our engineers complete the job, you can
+                        expect to be treated with the utmost respect, professionalism, and care. We turn up when we say
+                        we will, we do what we say we'll do, and we keep you informed every step of the way.
                     </p>
                     <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-                        Today, we've grown into a leading provider of heating solutions, but our core values remain the
-                        same: reliable service you can trust, transparent communication, and technical excellence. Every
-                        member of our team carries this legacy forward in every job they undertake.
+                        At Vantage Heating, we specialise in whole house heating and installations — helping homeowners
+                        across the UK create homes that are warmer, more energy efficient, and more comfortable all year
+                        round. Whether it's a full central heating installation, heat pump system, boiler upgrade, or a
+                        comprehensive installation package, our certified engineers bring decades of combined experience
+                        to every project.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                        We've built an outstanding reputation for quality workmanship and genuine customer service, and
+                        we're proud that much of our work comes through word of mouth and returning clients who trust us
+                        to get it right. Our experience extends beyond domestic work — we've partnered with multiple
+                        developers and main contractors in delivering high-end residential developments, bringing the
+                        same standard of quality and reliability to every new build project we're part of.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                        Every home is different, which is why we take the time to understand your needs and recommend
+                        solutions that truly work for your property and your budget — not just the quickest fix.
                     </p>
                     <div class="pt-4">
                         <img alt="Founder Signature" class="h-12 opacity-60 dark:invert"
@@ -389,7 +454,7 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <button
-                        class="bg-primary hover:bg-[#d66e0b] text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors shadow-lg hover:shadow-primary/20">
+                        class="btn-primary flex items-center gap-2 shadow-xl">
                         Get a Free Quote
                     </button>
                     <button
@@ -403,15 +468,7 @@
     <!-- Footer -->
     <footer class="bg-secondary text-white pt-16 pb-8">
         <div class="container mx-auto px-4">
-            <div class="flex justify-center mb-16">
-                <div class="text-center">
-                    <span
-                        class="font-display font-black text-5xl lg:text-7xl tracking-tighter text-white opacity-20 select-none">VANTAGE</span>
-                    <div
-                        class="font-display font-bold text-xl lg:text-2xl tracking-[0.5em] text-primary -mt-2 lg:-mt-4 uppercase">
-                        Heating</div>
-                </div>
-            </div>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 border-b border-gray-700 pb-12">
                 <div>
                     <h4 class="font-bold text-lg mb-4 text-white">About Us</h4>

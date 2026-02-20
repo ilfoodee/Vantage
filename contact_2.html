@@ -26,17 +26,69 @@
             },
         }
     </script>
-<style>
-        body {
-            font-family: 'Manrope', sans-serif;
-        }
-        .copper-glow:focus-within {
-            box-shadow: 0 0 0 2px rgba(236, 109, 19, 0.3);
-            border-color: #ec6d13;
-        }.map-grayscale {
-            filter: grayscale(100%) invert(92%) hue-rotate(180deg) brightness(85%) contrast(85%);
-        }
-    </style>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+    
+    .btn-primary {
+      background: #0369A1;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 200ms ease;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #0F172A;
+      border: 2px solid #0F172A;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 200ms ease;
+      cursor: pointer;
+    }
+
+    .card {
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: all 200ms ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+
+    .input {
+      padding: 12px 16px;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 200ms ease;
+    }
+
+    .input:focus {
+      border-color: #0F172A;
+      outline: none;
+      box-shadow: 0 0 0 3px #0F172A20;
+    }
+  </style>
 </head>
 <body class="bg-background-dark text-slate-50 min-h-screen flex flex-col font-display">
 <header class="flex items-center justify-between whitespace-nowrap border-b border-border-dark px-4 md:px-10 py-4 bg-background-dark">
@@ -96,7 +148,7 @@
 </div>
 <div class="flex flex-col gap-1">
 <p class="text-text-muted text-xs font-bold uppercase tracking-wide">General Inquiries</p>
-<p class="text-white text-lg font-bold tracking-tight group-hover:text-primary transition-colors">support@vantageheating.com</p>
+<p class="text-white text-lg font-bold tracking-tight group-hover:text-primary transition-colors">hello@vantageheating.co.uk</p>
 </div>
 </div>
 <div class="group flex items-center gap-6 rounded-2xl border border-border-dark bg-surface-dark/50 p-6 transition-all hover:border-primary/50 hover:bg-surface-dark hover:shadow-lg hover:shadow-primary/5">
@@ -161,7 +213,7 @@
 <label class="text-xs font-bold uppercase tracking-wider text-text-muted ml-1" for="message">Message</label>
 <textarea class="w-full rounded-xl bg-[#1f1f1f] border border-border-dark text-white px-5 py-3.5 placeholder-neutral-600 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200 resize-none" id="message" placeholder="How can we help you today?" rows="4"></textarea>
 </div>
-<button class="w-full bg-primary hover:bg-[#d65c0a] text-white font-bold py-4 rounded-xl transition-all duration-200 transform active:scale-[0.98] shadow-lg shadow-primary/20 flex items-center justify-center gap-2 mt-4" type="button">
+<button class="btn-primary w-full mt-4 flex items-center justify-center gap-2 shadow-lg" type="button">
 <span>Submit Request</span>
 <span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
 </button>
@@ -213,3 +265,4 @@
 </footer>
 
 </body></html>
+
